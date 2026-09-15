@@ -159,9 +159,10 @@ One of the biggest takeaways from the project was learning to think of periphera
 
 
 Deadzone applied
-
---Side note
-This project taught me so much about C ,GPIOs ,Timers , interrupts, bit manipulation etc. It was my first project on embedded systems and i had a ton of ups and downs. But im so happy to say I completed it. Thank you for checking out my project and I hope you keep your eyes out for future projects as I love programming so i will always be working on somthing. 
----
    ↓
 Servo / motor commands
+
+
+--Side note
+This project taught me so much about C ,GPIOs ,Timers , interrupts, bit manipulation etc. It was my first project on embedded systems and it had a ton of ups and downs. But im so happy to say I completed it. Thank you for checking out my project and I hope you keep your eyes out for future projects as I love programming so i will always be working on somthing. 
+---
