@@ -117,7 +117,7 @@ The final version is much less dependent on blocking CPU operations and makes gr
 
 ## What I Learned
 
-Before this project, I had almost no understanding of C programming and had even less experience with how software directly controls microcontroller hardware.
+Before this project, I had little understanding of C programming and had even less experience with how software directly controls microcontroller hardware.
 
 Through this project I learned:
 - How memory-mapped hardware registers are used to control peripherals
@@ -164,5 +164,5 @@ Servo / motor commands
 
 
 --Side note
-This project taught me so much about C ,GPIOs ,Timers , interrupts, bit manipulation etc. It was my first project on embedded systems and it had a ton of ups and downs. But im so happy to say I completed it. Thank you for checking out my project and I hope you keep your eyes out for future projects as I love programming so i will always be working on somthing. 
+This project taught me so much about C ,GPIOs ,Timers , interrupts, bit manipulation etc. It was my first project on embedded systems and it had a ton of ups and downs. But i'm so happy to say I completed it. Programming hardware & software was very rewarding. Thank you for checking out my project and I hope you keep your eyes out for future projects as I love programming so i will always be working on something. 
 ---
