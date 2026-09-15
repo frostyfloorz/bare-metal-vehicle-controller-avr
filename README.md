@@ -151,10 +151,15 @@ One of the biggest takeaways from the project was learning to think of periphera
 
 
 
-Quick recording of the test cases joystick in diffrent directions
+Quick recording of the test cases: moving the joystick in different directions controlled the hardware while UART telemetry sent the system data to my PC.
+
 
 https://github.com/user-attachments/assets/0682a205-733a-408a-8a10-6ee822620fb4
 
+
+Prototype hardware setup for the vehicle controller. The project focuses on the control system—the “brains” of the vehicle so I kept the mechanical build minimal rather than turning it into a full RC car.
+
+<img width="2880" height="2160" alt="image" src="https://github.com/user-attachments/assets/075de384-f06a-4574-ad10-98c87d3162fb" />
 
 
 
