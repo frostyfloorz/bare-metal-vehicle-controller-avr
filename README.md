@@ -1,9 +1,6 @@
 # Bare-Metal AVR Vehicle Controller
 
---Side note
 
-This project taught me so much about C ,GPIOs ,Timers , interrupts, bit manipulation etc. It was my first project on embedded systems and i had a ton of ups and downs. Scrambling through a 200 page document to find names of registers, struggling through timer logic this project had so many ups and downs but im so happy to say I completed it. Thank you for checking out my project and I hope you keep yours eyes out for future projects as I love programming so i will always be working on somthing. 
----
 A bare-metal embedded control project built on the ATmega2560 using direct register-level programming in C.
 
 The system reads a dual-axis joystick, controls a servo for steering, controls a DC motor through an L293D H-bridge, includes a safety interlock, and sends live telemetry to a PC over UART.
@@ -162,5 +159,9 @@ One of the biggest takeaways from the project was learning to think of periphera
 
 
 Deadzone applied
+
+--Side note
+This project taught me so much about C ,GPIOs ,Timers , interrupts, bit manipulation etc. It was my first project on embedded systems and i had a ton of ups and downs. But im so happy to say I completed it. Thank you for checking out my project and I hope you keep your eyes out for future projects as I love programming so i will always be working on somthing. 
+---
    ↓
 Servo / motor commands
