@@ -1,3 +1,7 @@
+
+
+
+
 # Bare-Metal AVR Vehicle Controller
 
 
@@ -147,9 +151,9 @@ One of the biggest takeaways from the project was learning to think of periphera
 
 
 
+Quick recording of the test cases joystick in diffrent directions
 
-
-
+https://github.com/user-attachments/assets/0682a205-733a-408a-8a10-6ee822620fb4
 
 
 
