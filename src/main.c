@@ -8,28 +8,28 @@
 #include <stdlib.h>
 
 
-
+//shared global varibles 
 volatile uint16_t adcx =0;
 volatile uint16_t adcy =0;
-volatile bool current_channel;
+volatile bool current_channel; /* keeps track of which ADC channel is being read */
 
 
 
-
+/* switch between the X and Y joystick channels after each conversion */
 ISR(ADC_vect)
 {
     if (current_channel){
         adcx = ADC;
         current_channel = false;
-        ADMUX &= ~(1U << MUX0);
-        ADCSRA |= (1U << ADSC);
+        ADMUX &= ~(1U << MUX0); // switch to ADC0
+        ADCSRA |= (1U << ADSC); // start next conversion
 
 
     }
     else{
         adcy = ADC;
         current_channel = true;
-        ADMUX |= (1U << MUX0);
+        ADMUX |= (1U << MUX0); // switch back to ADC1
         ADCSRA |= (1U << ADSC);
 
 
@@ -83,6 +83,7 @@ void servo_init(void)
     OCR1A = 3000;             // start centered
 }
 
+/* stop small joystick noise near the center from causing movement */
  void deadzone(int16_t *pScale){
 
     if (*pScale <5 && *pScale > -5){
@@ -114,6 +115,7 @@ int16_t centeradc(uint16_t raw){
 
 
 }
+
 void adc_init(void)
 {
    ADMUX |= (1U << REFS0) ;  // use AVcc as ADC reference voltage
@@ -161,7 +163,7 @@ void uart_tx_int(int16_t value)
     uart_tx_string(buffer);
 }
 
-
+/* send useful controller values to the PC for testing/debugging */
 void uart_tx_telemetry(int16_t steer,
                        int16_t throttle,
                        uint8_t pwm,
@@ -179,23 +181,6 @@ void uart_tx_telemetry(int16_t steer,
     
     
 }
-
-/*
-uint16_t adc_read(uint8_t channel)
-{
-    // Keep reference settings clear old channel select the  new channel
-    
-
-    // Start conversion
-    ADCSRA |= (1U << ADSC);
-
-    // Wait until conversion is done
-    while (ADCSRA & (1U << ADSC))
-    {
-    }
-
-    return ADC;
-*/
 
 typedef struct{
          uint8_t pwm;
