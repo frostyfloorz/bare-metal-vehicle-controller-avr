@@ -228,12 +228,15 @@ uart_tx_string("\r\n");
 int telementryCounter =0;
 
 while(1){
-    
+    /* controller enabled when safety input is pulled low */
 if (!(PINB & (1U<< PINB6))){
 
     uint16_t rawx;
     uint16_t rawy;
-
+        /*
+             * ADC values are 16 bit but the AVR is 8 bit.
+             * Prevent the ISR from changing them halfway through a read.
+             */
     ATOMIC_BLOCK(ATOMIC_RESTORESTATE)
 {
      rawx = adcx;
@@ -247,6 +250,7 @@ if (!(PINB & (1U<< PINB6))){
     deadzone(&scaley);
     int16_t pulse = servo_pulse(scalex);
     data dat = motory(scaley);
+    /* prevents spamming UART every loop  */
     if (telementryCounter >= 1000UL){
         uart_tx_telemetry(scalex, scaley, dat.pwm, false);
         telementryCounter = 0;
